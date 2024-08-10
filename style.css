@@ -1,0 +1,43 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+    font-family: "cairo" , sans-serif;
+}
+
+
+div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+    transform: translate(-50%, -50%);
+}
+
+div span{
+    font-size: 80px;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+div span::before{
+    content: '';
+    position: absolute;
+    background-color: white;
+    width: 100px;
+    height: 84px;
+    mix-blend-mode: difference;
+    animation: move 4s infinite;
+}
+
+@keyframes move {
+0%, 100%{
+    left: 0;
+}
+50%{
+    left: calc(100% - 100px);
+}
+
+}
